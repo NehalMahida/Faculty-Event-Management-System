@@ -13,13 +13,12 @@ require 'include.php';
 
         
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
+	
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
            <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
 
+           <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">  
+      
 
 
 
@@ -37,7 +36,7 @@ require 'include.php';
 
 
      
-  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="CSS/index.css">
 </head>
 <body>
   <!-- <form action="fetch_data.php" method="POST"> -->
@@ -202,7 +201,7 @@ require 'include.php';
           
             <option class="dropdown-item" value="">-- Participation Hour --</option>
             <option class="dropdown-item" value="4"><3 Hour</option>
-            <option class="dropdown-item" value="5">>3 Hour</option>
+            <option class="dropdown-item" value="5">>=3 Hour</option>
    
         </div>
         </select>
@@ -212,70 +211,110 @@ require 'include.php';
 
 		</div>
 
-		<div class="col-lg-2 dropdown">
-  			<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    		Leave Required?
-  			</button>
-  			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    			<a class="dropdown-item" href="#">Yes</a>
-    			<a class="dropdown-item" href="#">No</a>
-  			</div>
-		</div>
 
-		<div class="col-lg-4 dropdown">
-  			<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    		Member of Organizing Committee
-  			</button>
-  			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    			<a class="dropdown-item" href="#">Yes</a>
-    			<a class="dropdown-item" href="#">No</a>
-  			</div>
-		</div>
+    <div class="col-lg-2 dropdown">
+        <select name="leave_required" id="leave_required">
+            
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          
+            <option class="dropdown-item" value="">-- Leave Required? --</option>
+            <option class="dropdown-item" value="Yes">Yes</option>
+            <option class="dropdown-item" value="No">No</option>
+   
+        </div>
+        </select>
+        
 
-		<div class="col-lg-4 btn btn-primary">
-			<input type="date" id="idate" name="Event From">
-			To
-			<input type="date" id="edate" name="Event To">
-		</div>
+
+
+    </div>
+
+
+
+    <div class="col-lg-3 dropdown">
+        <select name="Member_of_organized" id="Member_of_organized">
+            
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          
+            <option class="dropdown-item" value="">-- Member of Organizing Committee --</option>
+            <option class="dropdown-item" value="Yes">Yes</option>
+            <option class="dropdown-item" value="No">No</option>
+   
+        </div>
+        </select>
+        
+
+
+
+    </div>
+
+
+<div class="col-lg-2">  
+                     <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" />  
+                </div>  
+                <div class="col-md-2">  
+                     <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" />  
+                </div>  
+                
+                
 	</div>
 
 	<div class="normalrow row">
-		<div class="col-lg-4 dropdown">
+		
+
+
+
+
+
+    <div class="col-lg-3 dropdown">
+        <select name="financial_other_agency" id="financial_other_agency">
+            
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          
+            <option class="dropdown-item" value="">--Financial Assistance from Other Agency?--</option>
+            <option class="dropdown-item" value="Yes">Yes</option>
+            <option class="dropdown-item" value="No">No</option>
+   
+        </div>
+        </select>
+        
+
+
+
+    </div>
+
+	
+
+
+
+<div class="col-lg-3 dropdown">
+        <select name="financial_charusat" id="financial_charusat">
+            
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          
+            <option class="dropdown-item" value="">--Financial Assistance from CHARUSAT?--</option>
+            <option class="dropdown-item" value="Yes">Yes</option>
+            <option class="dropdown-item" value="No">No</option>
+   
+        </div>
+        </select>
+        
+
+
+
+    </div>
+
+
+
   			
-  			<select class="btn btn-primary ">
-          <option value="">--Financial Assistance from Other Agency?--</option>
-          <option value="yes" > Yes</option>
-          <option value="No" > No</option>
-
-        </select>
 
 
-
-		</div>
-
-		<div class="col-lg-4 dropdown">
-  			 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    		Financial Assistance from CHARUSAT?
-  			</button>
-  			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    			<a class="dropdown-item" href="#">Yes</a>
-    			<a class="dropdown-item" href="#">No</a>
-          <select name="" id="">
-          <option value="qwret">qedrfg</option>
-        </select>
+        <div id="header">
+          <input class="btn-primary" type="button" id="hide" value="Select Column" style="display: none;">
+          <input  class="btn-primary" type="button" id="show" value="Select Column"></div>
+        <div id="content" style="display: none;">
 
 
- 
-</div>
-
-
-
-  			</div>
-
-
-
-        <div id="header"><input class="btn-primary" type="button" id="hide" value="Select Column" style="display: none;"><input  class="btn-primary" type="button" id="show" value="Select Column"></div>
-  <div id="content" style="display: none;">
 
     <div class="containerr">
   <ul class="ks-cboxtags">
@@ -303,10 +342,13 @@ require 'include.php';
 
   </div>
   
-		</div>
-	</div>
+    </div>
+  </div>
+</div>
+
+    
   <div align="right">
-    <input style="margin-right: 50px" class="btn-primary" id="fetch"  type="submit" name="fetch" value="submit">
+    <input style="margin-right: 50px" class="btn btn-info" id="fetch"  type="submit" name="fetch" value="Filter">
   </div>
  
 
@@ -324,16 +366,16 @@ require 'include.php';
   			<input type="text" class="form-control" id="usr" placeholder="Actual Expance">
 		</div>
 	</div>
-	<div class="container" style="overflow-x:auto;">
+	<div class="container" >
    <p class="font-weight-light" style="color:grey;font-size:18px;">Type something in the input field to search according that.</p>  
                 <input id="myInput" type="text" placeholder="Search..." class="form-control" width="30">
                 <br><br>
                
-  	<div id="order_table">
+  	<div id="order_table" style="overflow-x:auto;">
   
    <div data-role="main" class="ui-content">
    
-    <table style="white-space:nowrap;width:100%;" class="table table-bordered ui-responsive" data-role="table" data-mode="columntoggle"  >
+    <table id="tblData" style="white-space:nowrap;width:100%;" class="table table-bordered ui-responsive" data-role="table" data-mode="columntoggle"  >
 
 
       <thead>
@@ -343,30 +385,27 @@ require 'include.php';
                                <th   data-priority="1" >EmpID_H</th>  
                                <th  data-priority="2">Employee Name</th>  
                                <th  data-priority="3">Employee Current Status</th>  
-                               <th  data-priority="4">Event_From</th>  
-                               <th >Event_To</th> 
+                               <th  data-priority="4">Event From</th>  
+                               <th >Event To</th> 
                                <th >RecStatus</th> 
                                <th >Department</th> 
-                               
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
+                               <th>SubOrgID_H</th>                               
+                               <th>DeptID_H</th>
+                               <th>ReportSysID_H</th>
+                               <th>RepOpt_H</th>
+                               <th>Report_Option</th>
+                               <th>Academic_Year</th>
+                               <th>Sub_Organization</th>
+                               <th>Application_ID</th>
+                               <th>Title</th>
+                               <th>Venue</th>
+                               <th>City</th>
+                               <th>State</th>
+                               <th>Country</th>
 
-                               <th >RecStatus</th> 
 
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
-                               <th >RecStatus</th> 
-                               
-                                
+
+
                           </tr>  
                           </thead>
                           <tbody id="myTable">
@@ -384,6 +423,19 @@ require 'include.php';
                                <td><?php echo $row["Event_To"]; ?></td>
                                <td><?php echo $row["RecStatus"]; ?></td>
                                <td><?php echo $row["Department"]; ?></td>
+                               <td><?php echo $row["SubOrgID_H"]; ?></td>
+                               <td><?php echo $row["DeptID_H"]; ?></td>
+                               <td><?php echo $row["ReportSysID_H"]; ?></td>
+                               <td><?php echo $row["RepOpt_H"]; ?></td>
+                               <td><?php echo $row["Report_Option"]; ?></td>
+                               <td><?php echo $row["Academic_Year"]; ?></td>
+                               <td><?php echo $row["Sub_Organization"]; ?></td>
+                               <td><?php echo $row["Application_ID"]; ?></td>
+                               <td><?php echo $row["Title"]; ?></td>
+                               <td><?php echo $row["Venue"]; ?></td>
+                               <td><?php echo $row["City"]; ?></td>
+                               <td><?php echo $row["State"]; ?></td>
+                               <td><?php echo $row["Country"]; ?></td>
 
                                
                               
@@ -407,8 +459,10 @@ require 'include.php';
      <input type="file" name="file" />
      <br />
      <input type="submit" name="submit" value="Import" class="btn btn-info" />
-    </div>
+     </div>
   </form>
+  <button onclick="exportToExcel('tblData', 'user-data')" class="btn btn-success">Export Table Data To Excel File</button>
+    
 </div>
 
 
@@ -423,10 +477,37 @@ $(document).ready(function(){
 });
 </script>
 
+ <script>  
+      $(document).ready(function(){  
+           $.datepicker.setDefaults({  
+                dateFormat: 'yy-mm-dd'   
+           });  
+           $(function(){  
+                $("#from_date").datepicker();  
+                $("#to_date").datepicker();  
+           }); 
+           </script>
+
 
   <script type="text/javascript" src="js/showhide.js"></script>
+
+
+          
 </body>
 </html> 
+     
+ <script>  
+      $(document).ready(function(){  
+           $.datepicker.setDefaults({  
+                dateFormat: 'yy-mm-dd'   
+           });  
+           $(function(){  
+                $("#from_date").datepicker();  
+                $("#to_date").datepicker();  
+           });  
+            
+      });  
+ </script>
  <script>  
       $(document).ready(function(){  
         
@@ -443,10 +524,18 @@ $(document).ready(function(){
                 var participation_mode=$('#participation_mode').val();
                 var organizing_body=$('#organizing_body').val();
                 var participation_hour=$('#participation_hour').val();
+                var leave_required=$('#leave_required').val();
+                var Member_of_organized=$('#Member_of_organized').val();
+                var financial_other_agency=$('#financial_other_agency').val();
+                var financial_charusat=$('#financial_charusat').val();
+
+
+                var from_date = $('#from_date').val();  
+                var to_date = $('#to_date').val(); 
                 
                 //alert(event_level); 
                  
-                if(event_type != '' || event_level != '' || academic_year!='' || report_status != '' || participation_mode !='' || organizing_body !='' || participation_hour != '')  
+                if(event_type != '' || event_level != '' || academic_year!='' || report_status != '' || participation_mode !='' || organizing_body !='' || participation_hour != '' || leave_required !='' || Member_of_organized !='' || financial_charusat != '' || financial_other_agency != '' || (from_date!='' && to_date!=''))  
                 { 
 
                  alert("Hi! chandresh mendapara");
@@ -454,7 +543,9 @@ $(document).ready(function(){
                      $.ajax({  
                           url:"filter.php",  
                           method:"POST",  
-                          data:{action:action,event_level:event_level,event_type:event_type,academic_year:academic_year,report_status:report_status,participation_mode:participation_mode,organizing_body:organizing_body,participation_hour:participation_hour},  
+                          data:{action:action,event_level:event_level,event_type:event_type,academic_year:academic_year,report_status:report_status,participation_mode:participation_mode,organizing_body:organizing_body,participation_hour:participation_hour,
+                              Member_of_organized:Member_of_organized,leave_required:leave_required,financial_other_agency:financial_other_agency,financial_charusat:financial_charusat,from_date:from_date,to_date:to_date
+                          },  
 
                           beforeSend:function()
                           {
@@ -470,7 +561,7 @@ $(document).ready(function(){
 
                 else{
 
-                  alert("Please add at least one filter");
+                  alert("Please add at least one filter or add both Date filter");
 
 
 
@@ -480,3 +571,33 @@ $(document).ready(function(){
            });  
       });  
  </script>
+ <script type="text/javascript">
+function exportToExcel(tableID, filename = ''){
+    var downloadurl;
+    var dataFileType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTMLData = tableSelect.outerHTML.replace(/ /g, '%20');
+    
+    filename = filename?filename+'.xls':'export_excel_data.xls';
+    
+    downloadurl = document.createElement("a");
+    
+    document.body.appendChild(downloadurl);
+    
+    if(navigator.msSaveOrOpenBlob){
+        var blob = new Blob(['\ufeff', tableHTMLData], {
+            type: dataFileType
+        });
+        navigator.msSaveOrOpenBlob( blob, filename);
+    }else{
+        downloadurl.href = 'data:' + dataFileType + ', ' + tableHTMLData;
+    
+        downloadurl.download = filename;
+        
+        downloadurl.click();
+    }
+}
+ 
+</script>
+
+
