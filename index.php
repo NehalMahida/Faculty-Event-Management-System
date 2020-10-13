@@ -561,12 +561,15 @@ $(document).ready(function(){
 
                           beforeSend:function()
                           {
-                             $('#loader').show(); 
+                            $('#order_table').hide();
+                             $('#loader').show();
+
                           },
 
                           success:function(data)  
                           { 
                             $('#loader').hide();
+                            $('#order_table').show();
 
                                $('#order_table').html(data);  
                           }  
