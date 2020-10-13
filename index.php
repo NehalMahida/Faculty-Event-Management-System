@@ -36,7 +36,7 @@ require 'include.php';
 
 
      
-  <link rel="stylesheet" type="text/css" href="CSS/index.css">
+  <link rel="stylesheet" type="text/css" href="style/index.css">
 </head>
 <body>
   <!-- <form action="fetch_data.php" method="POST"> -->
@@ -370,8 +370,13 @@ require 'include.php';
    <p class="font-weight-light" style="color:grey;font-size:18px;">Type something in the input field to search according that.</p>  
                 <input id="myInput" type="text" placeholder="Search..." class="form-control" width="30">
                 <br><br>
+
+                <div id="loader" >
+                  <img id="loading" src="images/loading.gif" alt="Loading..." >
+
+                </div>
                
-  	<div id="order_table" style="overflow-x:auto;">
+  	<div id="order_table" style="overflow-x:auto; height: 380px;overflow-y: auto;">
   
    <div data-role="main" class="ui-content">
    
@@ -381,19 +386,22 @@ require 'include.php';
       <thead>
     	
       		
-        <tr class="table-primary">  
-                               <th   data-priority="1" >EmpID_H</th>  
+        <tr class="table-primary"> 
+                              <th>Sr No.</th> 
+                               <th   data-priority="1" >Employee Code</th>  
                                <th  data-priority="2">Employee Name</th>  
                                <th  data-priority="3">Employee Current Status</th>  
                                <th  data-priority="4">Event From</th>  
                                <th >Event To</th> 
-                               <th >RecStatus</th> 
-                               <th >Department</th> 
-                               <th>SubOrgID_H</th>                               
-                               <th>DeptID_H</th>
+                               <!-- <th >RecStatus</th> 
+                                -->
+                              <th >Department</th> 
+                               <!-- <th>SubOrgID_H</th> -->                               
+                              <!--  <th>DeptID_H</th>
                                <th>ReportSysID_H</th>
                                <th>RepOpt_H</th>
-                               <th>Report_Option</th>
+                               -->
+                                <th>Report_Option</th>
                                <th>Academic_Year</th>
                                <th>Sub_Organization</th>
                                <th>Application_ID</th>
@@ -410,23 +418,26 @@ require 'include.php';
                           </thead>
                           <tbody id="myTable">
                      <?php  
-                      
+                      $i=0;
                      while($row = mysqli_fetch_array($result))  
-                     {  
+                     {  $i++;
                       
                         ?> 
                           <tr>  
-                               <td  ><?php echo $row["EmpID_H"]; ?></td>  
+                            <td><?php echo $i ?></td>
+                               <td  ><?php echo $row["Employee_Code"]; ?></td>  
                                <td><?php echo $row["Employee_Name"]; ?></td>  
                                <td><?php echo $row["Employee_Current_Status"]; ?></td>  
                                <td> <?php echo $row["Event_From"]; ?></td>  
                                <td><?php echo $row["Event_To"]; ?></td>
-                               <td><?php echo $row["RecStatus"]; ?></td>
+                             <!--   <td><?php echo $row["RecStatus"]; ?></td>
+                              --> 
                                <td><?php echo $row["Department"]; ?></td>
-                               <td><?php echo $row["SubOrgID_H"]; ?></td>
+                              <!--  <td><?php echo $row["SubOrgID_H"]; ?></td>
                                <td><?php echo $row["DeptID_H"]; ?></td>
                                <td><?php echo $row["ReportSysID_H"]; ?></td>
                                <td><?php echo $row["RepOpt_H"]; ?></td>
+                               --> 
                                <td><?php echo $row["Report_Option"]; ?></td>
                                <td><?php echo $row["Academic_Year"]; ?></td>
                                <td><?php echo $row["Sub_Organization"]; ?></td>
@@ -479,6 +490,7 @@ $(document).ready(function(){
 
  <script>  
       $(document).ready(function(){  
+        
            $.datepicker.setDefaults({  
                 dateFormat: 'yy-mm-dd'   
            });  
@@ -549,11 +561,16 @@ $(document).ready(function(){
 
                           beforeSend:function()
                           {
-                             $('#order_table').html("Working on..."); 
+                            $('#order_table').hide();
+                             $('#loader').show();
+
                           },
 
                           success:function(data)  
-                          {  
+                          { 
+                            $('#loader').hide();
+                            $('#order_table').show();
+
                                $('#order_table').html(data);  
                           }  
                      });  

@@ -123,7 +123,7 @@ $query = "
        $output .= '  
            <table style="white-space:nowrap;width:100%;" class="table table-bordered ">  
                 <tr class="table-primary">  
-                     <th width="5%">EmpID_H</th>  
+                     <th width="5%">Employee Code</th>  
                      <th width="30%">Employee Name</th>  
                      <th width="25%">Employee Current Status</th>
                      <th width="25%">Report Status</th>  
@@ -161,7 +161,7 @@ $query = "
                 $output .= ' 
                 <tbody id="myTable">   
                      <tr style="background-color: #f2f2f2"}>  
-                          <td>'. $row["EmpID_H"] .'</td>  
+                          <td>'. $row["Employee_Code"] .'</td>  
                           <td>'. $row["Employee_Name"] .'</td>  
                           <td>'. $row["Employee_Current_Status"] .'</td>
                           <td>'. $row["Event_Report_Status"] .'</td>
@@ -192,7 +192,7 @@ $query = "
                 $output .= ' 
                 <tbody id="myTable">   
                      <tr>  
-                          <td>'. $row["EmpID_H"] .'</td>  
+                          <td>'. $row["Employee_Code"] .'</td>  
                           <td>'. $row["Employee_Name"] .'</td>  
                           <td>'. $row["Employee_Current_Status"] .'</td>
                           <td>'. $row["Event_Report_Status"] .'</td>

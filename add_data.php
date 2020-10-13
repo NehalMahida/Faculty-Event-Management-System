@@ -11,7 +11,7 @@ require 'include.php';
    $handle = fopen($_FILES['file']['tmp_name'], "r");
    while($data = fgetcsv($handle))
    {
-                $item1 = mysqli_real_escape_string($connect, $data[0]);  
+                //$item1 = mysqli_real_escape_string($connect, $data[0]);  
                 $item2 = mysqli_real_escape_string($connect, $data[1]);
                 $item3 = mysqli_real_escape_string($connect, $data[2]);  
                 $item4 = mysqli_real_escape_string($connect, $data[3]); 
@@ -52,22 +52,16 @@ require 'include.php';
                 
                 $item35 = mysqli_real_escape_string($connect, $data[34]); 
                 $item36 = mysqli_real_escape_string($connect, $data[35]); 
-                $item37 = mysqli_real_escape_string($connect, $data[36]); 
-                $item38 = mysqli_real_escape_string($connect, $data[37]); 
-                $item39 = mysqli_real_escape_string($connect, $data[38]); 
-                $item40 = mysqli_real_escape_string($connect, $data[39]); 
-                $item41 = mysqli_real_escape_string($connect, $data[40]); 
-                $item42 = mysqli_real_escape_string($connect, $data[41]); 
+                //$item37 = mysqli_real_escape_string($connect, $data[36]); 
+              //  $item38 = mysqli_real_escape_string($connect, $data[37]); 
+                //$item39 = mysqli_real_escape_string($connect, $data[38]); 
+                //$item40 = mysqli_real_escape_string($connect, $data[39]); 
+                //$item41 = mysqli_real_escape_string($connect, $data[40]); 
+                //$item42 = mysqli_real_escape_string($connect, $data[41]); 
                 
-                $query = "INSERT into sheet3(Sr_No,
-                IDtblEventParticipantForm_H,
-                RecStatus,
-                SubOrgID_H,
-                DeptID_H,
-                 EmpID_H,
-                 ReportSysID_H,
-                 RepOpt_H,
-                 Report_Option,
+                $query = "INSERT into sheet3(
+                
+                  Report_Option,
                  Academic_Year,
                  Sub_Organization,
                   Department,
@@ -78,6 +72,7 @@ require 'include.php';
                   Designation,  
                   Event_Type,
                   Event_Level,
+                  Participation_Presentation_Mode,
                   Organizing_Body,
                   Name_of_Organizing_Body,
                   Title,
@@ -100,18 +95,26 @@ require 'include.php';
                   Amount_of_Assistance_from_Agency,
                    Assistance_approved_from_CHARUSAT, 
                    Event_Report_Status,
-                    Actual_Expense) values ('$item1','$item2','$item3','$item4','$item5','$item6','$item7','$item8','$item9','$item10','$item11','$item12',
-                    '$item13','$item14','$item15','$item16','$item17','$item18','$item19','$item20','$item21','$item22','$item23','$item24','$item25',
-                    '$item26','$item27','$item28','$item29','$item30','$item31','$item32','$item33','$item34','$item35','$item36','$item37','$item38',
-                    '$item39','$item40','$item41','$item42')";
+                    Actual_Expense)
+                     values 
+               ('$item2','$item3','$item4','$item5','$item6',
+                '$item7','$item8','$item9','$item10','$item11','$item12',
+                '$item13','$item14','$item15','$item16','$item17',
+                '$item18','$item19','$item20','$item21','$item22',
+                '$item23','$item24','$item25','$item26','$item27',
+                '$item28','$item29','$item30','$item31','$item32',
+                '$item33','$item34','$item35','$item36')";
+                   //'$item37','$item38',
+                    // '$item39','$item40','$item41','$item42')";
 
 
                 mysqli_query($connect, $query);
-                echo "<script>alert('Import done');</script>";
                 
 
    }
    fclose($handle);
+    echo "<script>alert('Import done');</script>";
+               
    header('Location: index.php');
     
 

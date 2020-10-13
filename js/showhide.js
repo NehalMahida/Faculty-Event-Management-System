@@ -1,3 +1,4 @@
+  
 $('#hide') .click(function(){
 
 	$('#content').hide('blind');
@@ -12,11 +13,3 @@ $('#show') .click(function(){
 	$('#hide').show();
 
 });
-        $("button").click(function(){
-            var favorite = [];
-            $.each($("input[name='sport']:checked"), function(){
-                favorite.push($(this).val());
-            });
-            alert("My favourite sports are: " + favorite.join(", "));
-        });
-   
