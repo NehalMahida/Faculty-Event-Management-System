@@ -115,7 +115,7 @@ require 'include.php';
    fclose($handle);
     echo "<script>alert('Import done');</script>";
                
-   //header('Location: index.php');
+   header('Location: index.php');
     
 
   }
