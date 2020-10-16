@@ -21,29 +21,24 @@ require 'include.php';
       
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      
-  <link rel="stylesheet" type="text/css" href="style/index.css">
+  <link rel="stylesheet" type="text/css" href="CSS/index.css">
 </head>
 <body>
   <!-- <form action="fetch_data.php" method="POST"> -->
   	<div class="firstrow row">
 		
-
     <div class="col-lg-2 dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="report_status" id="report_status">
+        Report Status
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" value="Approved">Approved</a>
+          <a class="dropdown-item" value="Pending">Pending</a>
+        </div>
+    </div>
+
+   <!--  <div class="col-lg-2 dropdown">
       <select name="report_status" id="report_status">
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Report status
@@ -57,25 +52,30 @@ require 'include.php';
         </div>
         </select>
  
+    </div> -->
+
+
+<div class="col-lg-2 dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="academic_year" id="academic_year">
+        Academic Year
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" value="2010-11">2010-11</a>
+          <a class="dropdown-item" value="2011-12">2011-12</a>
+          <a class="dropdown-item" value="2012-13">2012-13</a>
+          <a class="dropdown-item" value="2013-14">2013-14</a>
+          <a class="dropdown-item" value="2014-15">2014-15</a>
+          <a class="dropdown-item" value="2015-16">2015-16</a>
+          <a class="dropdown-item" value="2016-17">2016-17</a>
+          <a class="dropdown-item" value="2017-18">2017-18</a>
+          <a class="dropdown-item" value="2018-19">2018-19</a>
+          <a class="dropdown-item" value="2019-20">2019-20</a>
+          <a class="dropdown-item" value="2020-21">2020-21</a>
+        </div>
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="col-lg-2 dropdown">
+    <!-- <div class="col-lg-2 dropdown">
       <select name="academic_year" id="academic_year">
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Academic Year
@@ -99,9 +99,26 @@ require 'include.php';
         </div>
         </select>
  
+    </div> -->
+
+<div class="col-lg-2 dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="event_type" id="event_type">
+        Event Type
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" value="FDP">FDP</a>
+          <a class="dropdown-item" value="Industrial Training">Industrial Training</a>
+          <a class="dropdown-item" value="Workshops">Workshops</a>
+          <a class="dropdown-item" value="STTP">STTP</a>
+          <a class="dropdown-item" value="Symposia">Symposia</a>
+          <a class="dropdown-item" value="Conferences">Conferences</a>
+          <a class="dropdown-item" value="Online Course">Online Course</a>
+          <a class="dropdown-item" value="Webinar">Webinar</a>
+          <a class="dropdown-item" value="Other">Other</a>
+        </div>
     </div>
 
-		<div class="col-lg-2 dropdown">
+<!-- 		<div class="col-lg-2 dropdown">
       <select name="event_type" id="event_type">
        			
   			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -122,9 +139,24 @@ require 'include.php';
   			</div>
         </select>
  
-		</div>
+		</div> -->
 
-    <div class="col-lg-2 dropdown">
+  <div class="col-lg-2 dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="event_level" id="event_level">
+        Event Level
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" value="University">University</a>
+          <a class="dropdown-item" value="State">State</a>
+          <a class="dropdown-item" value="National">National</a>
+          <a class="dropdown-item" value="International_Within_India">International(Within India)</a>
+          <a class="dropdown-item" value="International_Abroad">International(Abroad)</a>
+        </div>
+    </div>
+
+
+
+   <!--  <div class="col-lg-2 dropdown">
       <select name="event_level" id="event_level">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -141,27 +173,24 @@ require 'include.php';
         </div>
         </select>
  
+    </div> -->
+
+
+
+<div class="col-lg-2 dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="participation_mode" id="participation_mode">
+        Participation Mode
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" value="In Person">In Person</a>
+          <a class="dropdown-item" value="Online">Online</a>
+        </div>
     </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	
-    <div class="col-lg-2 dropdown">
+    <!-- <div class="col-lg-2 dropdown">
       <select name="participation_mode" id="participation_mode">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -173,10 +202,24 @@ require 'include.php';
         </div>
         </select>
  
-    </div>
+    </div> -->
+
 
 
 <div class="col-lg-2 dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="organizing_body" id="organizing_body">
+        Organizing Body
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" value="Charusat">Charusat</a>
+          <a class="dropdown-item" value="Other">Other</a>
+        </div>
+    </div>
+  </div>
+
+
+
+<!-- <div class="col-lg-2 dropdown">
       <select name="organizing_body" id="organizing_body">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -191,9 +234,22 @@ require 'include.php';
     </div>
 
 
-	</div>
+	</div> -->
 
-	<div class="normalrow row">
+
+<div class="normalrow row">
+    <div class="col-lg-2 dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="participation_hour" id="participation_hour">
+        Participation Hours
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" value="4"><3 Hours</a>
+          <a class="dropdown-item" value="5">>3 Hours</a>
+        </div>
+    </div>
+
+
+	<!-- <div class="normalrow row">
 		<div class="col-lg-2 dropdown">
         <select name="participation_hour" id="participation_hour">
             
@@ -209,10 +265,22 @@ require 'include.php';
 
 
 
-		</div>
+		</div> -->
 
 
-    <div class="col-lg-2 dropdown">
+
+<div class="col-lg-2 dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="leave_required" id="leave_required">
+        Leave Required?
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" value="Yes">Yes</a>
+          <a class="dropdown-item" value="No">No</a>
+        </div>
+    </div>
+
+
+    <!-- <div class="col-lg-2 dropdown">
         <select name="leave_required" id="leave_required">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -227,11 +295,20 @@ require 'include.php';
 
 
 
+    </div> -->
+
+
+<div class="col-lg-4 dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="Member_of_organized" id="Member_of_organized">
+        Member of Organizing Committee
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" value="Yes">Yes</a>
+          <a class="dropdown-item" value="No">No</a>
+        </div>
     </div>
 
-
-
-    <div class="col-lg-3 dropdown">
+    <!-- <div class="col-lg-3 dropdown">
         <select name="Member_of_organized" id="Member_of_organized">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -246,7 +323,7 @@ require 'include.php';
 
 
 
-    </div>
+    </div> -->
 
 
 <div class="col-lg-2">  
@@ -259,13 +336,23 @@ require 'include.php';
                 
 	</div>
 
-	<div class="normalrow row">
+
+
+  <div class="normalrow row">
+    <div class="col-lg-4 dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="financial_other_agency" id="financial_other_agency">
+        Financial Assistance from Other Agency?
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" value="Yes">Yes</a>
+          <a class="dropdown-item" value="No">No</a>
+        </div>
+    </div>
+
+
+
+	<!-- <div class="normalrow row">
 		
-
-
-
-
-
     <div class="col-lg-3 dropdown">
         <select name="financial_other_agency" id="financial_other_agency">
             
@@ -281,13 +368,21 @@ require 'include.php';
 
 
 
-    </div>
+    </div> -->
 
 	
+<div class="col-lg-4 dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="financial_charusat" id="financial_charusat">
+        Financial Assistance from CHARUSAT?
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" value="Yes">Yes</a>
+          <a class="dropdown-item" value="No">No</a>
+        </div>
+    </div>
+  
 
-
-
-<div class="col-lg-3 dropdown">
+<!-- <div class="col-lg-3 dropdown">
         <select name="financial_charusat" id="financial_charusat">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -302,16 +397,14 @@ require 'include.php';
 
 
 
-    </div>
+    </div> -->
 
 
 
   			
-
-
-        <div id="header">
-          <input class="btn-primary" type="button" id="hide" value="Select Column" style="display: none;">
-          <input  class="btn-primary" type="button" id="show" value="Select Column"></div>
+        <div id="header" class="col-lg-2">
+          <input class="btn btn-primary" type="button" id="hide" value="Select Column" style="display: none;">
+          <input  class="btn btn-primary" type="button" id="show" value="Select Column"></div>
         <div id="content" style="display: none;">
 
 
@@ -345,11 +438,13 @@ require 'include.php';
     </div>
   </div>
 </div>
+</div>
 
-    
-  <div align="right">
+<div class="normalrow row">  
+  <div class="col-lg-2">
     <input style="margin-right: 50px" class="btn btn-info" id="fetch"  type="submit" name="fetch" value="Filter">
   </div>
+</div>
  
 
 
@@ -379,8 +474,26 @@ require 'include.php';
   	<div id="order_table" style="overflow-x:auto; height: 380px;overflow-y: auto;">
   
    <div data-role="main" class="ui-content">
+
+
+<div>
+  <form method="POST" action="add_data.php" enctype="multipart/form-data">
+    <div align="center">  
+     <label>Select CSV File:</label>
+     <input type="file" name="file" />
+   </div>
+     <br />
+  <div align="center">
+     <input type="submit" name="submit" value="Import" class="btn btn-info" />
+     </div>
+  </form>
+  
+    
+</div>
    
-    <table id="tblData" style="white-space:nowrap;width:100%;" class="table table-bordered ui-responsive" data-role="table" data-mode="columntoggle"  >
+
+
+    <table id="tblData" style="white-space:nowrap;width:100%;" class="table table-bordered ui-responsive table-striped" data-role="table" data-mode="columntoggle"  >
 
 
       <thead>
@@ -462,20 +575,11 @@ require 'include.php';
   	</table>
   </div>
   </div>
-	</div>
-<div>
-  <form method="POST" action="add_data.php" enctype="multipart/form-data">
-    <div align="center">  
-     <label>Select CSV File:</label>
-     <input type="file" name="file" />
-     <br />
-     <input type="submit" name="submit" value="Import" class="btn btn-info" />
-     </div>
-  </form>
-  <button onclick="exportToExcel('tblData', 'user-data')" class="btn btn-success">Export Table Data To Excel File</button>
-    
-</div>
+	</div></br>
 
+  <div align="center">
+    <button onclick="exportToExcel('tblData', 'user-data')" class="btn btn-success">Print Table</button>
+  </div></br></br></br>
 
   <script>
 $(document).ready(function(){
@@ -616,5 +720,3 @@ function exportToExcel(tableID, filename = ''){
 }
  
 </script>
-
-
