@@ -18,71 +18,53 @@ require 'include.php';
            <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
 
            <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">  
-      
-
 
      
-  <link rel="stylesheet" type="text/css" href="CSS/index.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
   <!-- <form action="fetch_data.php" method="POST"> -->
   	<div class="firstrow row">
 		
-    <div class="col-lg-2 dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="report_status" id="report_status">
-        Report Status
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" value="Approved">Approved</a>
-          <a class="dropdown-item" value="Pending">Pending</a>
-        </div>
-    </div>
 
-   <!--  <div class="col-lg-2 dropdown">
-      <select name="report_status" id="report_status">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Report status
-        </button>
+    <div class="col-lg-2 dropdown">
+      <select class="select-css" class="select-css" name="report_status" id="report_status">
+          
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
-            <option class="dropdown-item" value="">-- Select Report  Status --</option>
+            <option class="dropdown-item" value="">Select Report  Status </option>
             <option class="dropdown-item" value="Approved">Approved</option>
             <option class="dropdown-item" value="Pending">Pending</option>
    
         </div>
         </select>
  
-    </div> -->
-
-
-<div class="col-lg-2 dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="academic_year" id="academic_year">
-        Academic Year
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" value="2010-11">2010-11</a>
-          <a class="dropdown-item" value="2011-12">2011-12</a>
-          <a class="dropdown-item" value="2012-13">2012-13</a>
-          <a class="dropdown-item" value="2013-14">2013-14</a>
-          <a class="dropdown-item" value="2014-15">2014-15</a>
-          <a class="dropdown-item" value="2015-16">2015-16</a>
-          <a class="dropdown-item" value="2016-17">2016-17</a>
-          <a class="dropdown-item" value="2017-18">2017-18</a>
-          <a class="dropdown-item" value="2018-19">2018-19</a>
-          <a class="dropdown-item" value="2019-20">2019-20</a>
-          <a class="dropdown-item" value="2020-21">2020-21</a>
-        </div>
     </div>
 
 
-    <!-- <div class="col-lg-2 dropdown">
-      <select name="academic_year" id="academic_year">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="col-lg-2 dropdown">
+      <select class="select-css" class="select-css" name="academic_year" id="academic_year">
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Academic Year
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
-            <option class="dropdown-item" value="">-- Select Academic Year --</option>
+            <option class="dropdown-item" value="">Select Academic Year </option>
             <option class="dropdown-item" value="2010-11">2010-11</option>
             <option class="dropdown-item" value="2011-12">2011-12</option>
             <option class="dropdown-item" value="2012-13">2012-13</option>
@@ -99,31 +81,14 @@ require 'include.php';
         </div>
         </select>
  
-    </div> -->
-
-<div class="col-lg-2 dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="event_type" id="event_type">
-        Event Type
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" value="FDP">FDP</a>
-          <a class="dropdown-item" value="Industrial Training">Industrial Training</a>
-          <a class="dropdown-item" value="Workshops">Workshops</a>
-          <a class="dropdown-item" value="STTP">STTP</a>
-          <a class="dropdown-item" value="Symposia">Symposia</a>
-          <a class="dropdown-item" value="Conferences">Conferences</a>
-          <a class="dropdown-item" value="Online Course">Online Course</a>
-          <a class="dropdown-item" value="Webinar">Webinar</a>
-          <a class="dropdown-item" value="Other">Other</a>
-        </div>
     </div>
 
-<!-- 		<div class="col-lg-2 dropdown">
-      <select name="event_type" id="event_type">
+		<div class="col-lg-2 dropdown">
+      <select class="select-css" name="event_type" id="event_type">
        			
   			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     			
-            <option class="dropdown-item" value="">-- Select Event Type --</option>
+            <option class="dropdown-item" value=""> Select Event Type </option>
             <option class="dropdown-item" value="FDP">FDP</option>
             <option class="dropdown-item" value="Industrial Training">Industrial Training</option>
             <option class="dropdown-item" value="Workshops">Workshops</option>
@@ -139,29 +104,14 @@ require 'include.php';
   			</div>
         </select>
  
-		</div> -->
+		</div>
 
-  <div class="col-lg-2 dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="event_level" id="event_level">
-        Event Level
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" value="University">University</a>
-          <a class="dropdown-item" value="State">State</a>
-          <a class="dropdown-item" value="National">National</a>
-          <a class="dropdown-item" value="International_Within_India">International(Within India)</a>
-          <a class="dropdown-item" value="International_Abroad">International(Abroad)</a>
-        </div>
-    </div>
-
-
-
-   <!--  <div class="col-lg-2 dropdown">
-      <select name="event_level" id="event_level">
+    <div class="col-lg-2 dropdown">
+      <select class="select-css" name="event_level" id="event_level">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
-            <option class="dropdown-item" value="">    --    Select Event Level   --</option>
+            <option class="dropdown-item" value="">        Select Event Level   </option>
             <option class="dropdown-item" value="University">University</option>
             <option class="dropdown-item" value="State">State</option>
             <option class="dropdown-item" value="National">National</option>
@@ -173,58 +123,47 @@ require 'include.php';
         </div>
         </select>
  
-    </div> -->
-
-
-
-<div class="col-lg-2 dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="participation_mode" id="participation_mode">
-        Participation Mode
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" value="In Person">In Person</a>
-          <a class="dropdown-item" value="Online">Online</a>
-        </div>
     </div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
-    <!-- <div class="col-lg-2 dropdown">
-      <select name="participation_mode" id="participation_mode">
+    <div class="col-lg-2 dropdown">
+      <select class="select-css" name="participation_mode" id="participation_mode">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
-            <option class="dropdown-item" value="">--Participation Mode --</option>
+            <option class="dropdown-item" value="">Participation Mode </option>
             <option class="dropdown-item" value="In Person">In Person</option>
             <option class="dropdown-item" value="Online">Online</option>
    
         </div>
         </select>
  
-    </div> -->
-
+    </div>
 
 
 <div class="col-lg-2 dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="organizing_body" id="organizing_body">
-        Organizing Body
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" value="Charusat">Charusat</a>
-          <a class="dropdown-item" value="Other">Other</a>
-        </div>
-    </div>
-  </div>
-
-
-
-<!-- <div class="col-lg-2 dropdown">
-      <select name="organizing_body" id="organizing_body">
+      <select class="select-css" name="organizing_body" id="organizing_body">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
-            <option class="dropdown-item" value="">-- Organizing Body --</option>
+            <option class="dropdown-item" value=""> Organizing Body </option>
             <option class="dropdown-item" value="Charusat">Charusat</option>
             <option class="dropdown-item" value="Other">Other</option>
    
@@ -234,28 +173,15 @@ require 'include.php';
     </div>
 
 
-	</div> -->
+	</div>
 
-
-<div class="normalrow row">
-    <div class="col-lg-2 dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="participation_hour" id="participation_hour">
-        Participation Hours
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" value="4"><3 Hours</a>
-          <a class="dropdown-item" value="5">>3 Hours</a>
-        </div>
-    </div>
-
-
-	<!-- <div class="normalrow row">
+	<div class="normalrow row">
 		<div class="col-lg-2 dropdown">
-        <select name="participation_hour" id="participation_hour">
+        <select class="select-css" name="participation_hour" id="participation_hour">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
-            <option class="dropdown-item" value="">-- Participation Hour --</option>
+            <option class="dropdown-item" value=""> Participation Hour </option>
             <option class="dropdown-item" value="4"><3 Hour</option>
             <option class="dropdown-item" value="5">>=3 Hour</option>
    
@@ -265,27 +191,15 @@ require 'include.php';
 
 
 
-		</div> -->
+		</div>
 
 
-
-<div class="col-lg-2 dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="leave_required" id="leave_required">
-        Leave Required?
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" value="Yes">Yes</a>
-          <a class="dropdown-item" value="No">No</a>
-        </div>
-    </div>
-
-
-    <!-- <div class="col-lg-2 dropdown">
-        <select name="leave_required" id="leave_required">
+    <div class="col-lg-2 dropdown">
+        <select class="select-css" name="leave_required" id="leave_required">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
-            <option class="dropdown-item" value="">-- Leave Required? --</option>
+            <option class="dropdown-item" value=""> Leave Required? </option>
             <option class="dropdown-item" value="Yes">Yes</option>
             <option class="dropdown-item" value="No">No</option>
    
@@ -295,25 +209,16 @@ require 'include.php';
 
 
 
-    </div> -->
-
-
-<div class="col-lg-4 dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="Member_of_organized" id="Member_of_organized">
-        Member of Organizing Committee
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" value="Yes">Yes</a>
-          <a class="dropdown-item" value="No">No</a>
-        </div>
     </div>
 
-    <!-- <div class="col-lg-3 dropdown">
-        <select name="Member_of_organized" id="Member_of_organized">
+
+
+    <div class="col-lg-3 dropdown">
+        <select class="select-css" name="Member_of_organized" id="Member_of_organized">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
-            <option class="dropdown-item" value="">-- Member of Organizing Committee --</option>
+            <option class="dropdown-item" value=""> Member of Organizing Committee </option>
             <option class="dropdown-item" value="Yes">Yes</option>
             <option class="dropdown-item" value="No">No</option>
    
@@ -323,10 +228,10 @@ require 'include.php';
 
 
 
-    </div> -->
+    </div>
 
 
-<div class="col-lg-2">  
+<div class="col-lg-3">  
                      <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" />  
                 </div>  
                 <div class="col-md-2">  
@@ -336,29 +241,19 @@ require 'include.php';
                 
 	</div>
 
-
-
-  <div class="normalrow row">
-    <div class="col-lg-4 dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="financial_other_agency" id="financial_other_agency">
-        Financial Assistance from Other Agency?
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" value="Yes">Yes</a>
-          <a class="dropdown-item" value="No">No</a>
-        </div>
-    </div>
-
-
-
-	<!-- <div class="normalrow row">
+	<div class="normalrow row">
 		
-    <div class="col-lg-3 dropdown">
-        <select name="financial_other_agency" id="financial_other_agency">
+
+
+
+
+
+    <div class="col-lg-4 dropdown">
+        <select class="select-css" name="financial_other_agency" id="financial_other_agency">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
-            <option class="dropdown-item" value="">--Financial Assistance from Other Agency?--</option>
+            <option class="dropdown-item" value="">Financial Assistance from Other Agency?</option>
             <option class="dropdown-item" value="Yes">Yes</option>
             <option class="dropdown-item" value="No">No</option>
    
@@ -368,26 +263,18 @@ require 'include.php';
 
 
 
-    </div> -->
+    </div>
 
 	
-<div class="col-lg-4 dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="financial_charusat" id="financial_charusat">
-        Financial Assistance from CHARUSAT?
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" value="Yes">Yes</a>
-          <a class="dropdown-item" value="No">No</a>
-        </div>
-    </div>
-  
 
-<!-- <div class="col-lg-3 dropdown">
-        <select name="financial_charusat" id="financial_charusat">
+
+
+<div class="col-lg-4 dropdown">
+        <select class="select-css" name="financial_charusat" id="financial_charusat">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
-            <option class="dropdown-item" value="">--Financial Assistance from CHARUSAT?--</option>
+            <option class="dropdown-item" value="">Financial Assistance from CHARUSAT?</option>
             <option class="dropdown-item" value="Yes">Yes</option>
             <option class="dropdown-item" value="No">No</option>
    
@@ -397,38 +284,147 @@ require 'include.php';
 
 
 
-    </div> -->
+    </div>
 
 
 
   			
-        <div id="header" class="col-lg-2">
-          <input class="btn btn-primary" type="button" id="hide" value="Select Column" style="display: none;">
+
+
+        <div id="header">
+          <input class=" btn btn-primary" type="button" id="hide" value="Select Column" style="display: none;">
           <input  class="btn btn-primary" type="button" id="show" value="Select Column"></div>
         <div id="content" style="display: none;">
 
 
 
     <div class="containerr">
-  <ul class="ks-cboxtags">
-    <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne">Rainbow Dash</label></li>
-    <li><input type="checkbox" id="checkboxTwo" value="Cotton Candy" checked><label for="checkboxTwo">Cotton Candy</label></li>
-    <li><input type="checkbox" id="checkboxThree" value="Rarity" checked><label for="checkboxThree">Rarity</label></li>
-    <li><input type="checkbox" id="checkboxFour" value="Moondancer"><label for="checkboxFour">Moondancer</label></li>
-    <li><input type="checkbox" id="checkboxFive" value="Surprise"><label for="checkboxFive">Surprise</label></li>
-    <li><input type="checkbox" id="checkboxSix" value="Twilight Sparkle" checked><label for="checkboxSix">Twilight
-                    Sparkle</label></li>
-    <li><input type="checkbox" id="checkboxSeven" value="Fluttershy"><label for="checkboxSeven">Fluttershy</label></li>
-    <li><input type="checkbox" id="checkboxEight" value="Derpy Hooves"><label for="checkboxEight">Derpy Hooves</label></li>
-    <li><input type="checkbox" id="checkboxNine" value="Princess Celestia"><label for="checkboxNine">Princess
-                    Celestia</label></li>
-    <li><input type="checkbox" id="checkboxTen" value="Gusty"><label for="checkboxTen">Gusty</label></li>
-    <li class="ks-selected"><input type="checkbox" id="checkboxEleven" value="Discord"><label for="checkboxEleven">Discord</label></li>
-    <li><input type="checkbox" id="checkboxTwelve" value="Clover"><label for="checkboxTwelve">Clover</label></li>
-    <li><input type="checkbox" id="checkboxThirteen" value="Baby Moondancer"><label for="checkboxThirteen">Baby
-                    Moondancer</label></li>
-    <li><input type="checkbox" id="checkboxFourteen" value="Medley"><label for="checkboxFourteen">Medley</label></li>
-    <li><input type="checkbox" id="checkboxFifteen" value="Firefly"><label for="checkboxFifteen">Firefly</label></li>
+  <ul class="ks-cboxtags" >
+    <li><input type="checkbox" class="mch" id="checkboxOne" value="Employee_Code" name="column[]" checked>
+      <label for="checkboxOne">Emp ID</label>
+    </li>
+    <li><input type="checkbox" class="mch" id="checkboxTwo" value="Department" checked name="column[]" >
+      <label for="checkboxTwo">Department</label>
+    </li>
+    <li><input type="checkbox" class="mch" id="checkboxThree" value="Employee_Name" checked name="column[]">
+      <label for="checkboxThree">Employee Name</label>
+    </li>
+    <li><input type="checkbox" class="mch" id="checkboxFour" value="Employee_Current_Status" name="column[]" checked>
+      <label for="checkboxFour">Employee Current Status</label>
+    </li>
+    <li><input type="checkbox" class="mch" id="checkboxFive" value="Designation" name="column[]">
+      <label for="checkboxFive">Designation</label>
+    </li>
+
+    <li><input type="checkbox" class="mch" id="checkboxFivee" value="Academic_Year" name="column[]" checked>
+      <label for="checkboxFivee">Academic year</label>
+    </li>
+    <li><input type="checkbox" id="checkboxSix" value="Event_Type" checked name="column[]">
+      <label for="checkboxSix">Event_Type</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxSixx" value="Application_ID" checked name="column[]">
+      <label for="checkboxSixx">Application ID</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxSixxx" value="Sub_Organization"  name="column[]">
+      <label for="checkboxSixxx">Sub Organization</label>
+    </li>
+    <li><input type="checkbox" id="checkboxSeven" value="Event_Level" name="column[]">
+      <label for="checkboxSeven">Event_Level</label>
+    </li>
+    <li><input type="checkbox" id="checkboxEight" value="Participation Presentation Mode  " name="column[]">
+      <label for="checkboxEight">Participation_Presentation_Mode  </label>
+    </li>
+    <li><input type="checkbox" id="checkboxNine" value="Organizing_Body" name="column[]">
+      <label for="checkboxNine">Organizing_Body</label>
+    </li>
+    <li><input type="checkbox" id="checkboxTen" value="Name_of_Organizing_Body" name="column[]">
+      <label for="checkboxTen">Name of Organizing Body</label></li>
+    <li class="ks-selected"><input type="checkbox" id="checkboxEleven" value="Title" name="column[]" checked>
+      <label for="checkboxEleven">Title</label></li>
+    <li><input type="checkbox" id="checkboxTwelve" value="Venue" name="column[]" checked>
+      <label for="checkboxTwelve">Venue</label>
+    </li>
+    <li><input type="checkbox" id="checkboxThirteen" value="City" name="column[]" checked>
+      <label for="checkboxThirteen">City</label>
+    </li>
+    <li><input type="checkbox" id="checkboxFourteen" value="State" name="column[]" checked>
+      <label for="checkboxFourteen">State</label>
+    </li>
+    <li><input type="checkbox" id="checkboxFifteenn" value="Country" name="column[]" checked>
+      <label for="checkboxFifteenn">Country</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxSixteen" value="Event_From" name="column[]" checked>
+      <label for="checkboxSixteen">Event From</label>
+    </li>
+    <li><input type="checkbox" id="checkboxSeventeen" value="Event_To" name="column[]" checked>
+      <label for="checkboxSeventeen">Event To</label>
+    </li>
+    <li><input type="checkbox" id="checkboxEighteen" value="Total_Hours_of_Participation" name="column[]">
+      <label for="checkboxEighteen">Hours of Participation</label>
+    </li> 
+    <li><input type="checkbox" id="checkboxNineteen" value="Leave_Required" name="column[]">
+      <label for="checkboxNineteen">Leave Required?</label>
+    </li>
+            
+    <li><input type="checkbox" id="checkboxTwenty" value="    Purpose_of_Event_Participation" name="column[]">
+      <label for="checkboxTwenty">Purpose of Event Participation</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentyOne" value="Presenting_as" name="column[]">
+      <label for="checkboxTwentyOne">Presenting as</label>
+    </li>
+
+
+    <li><input type="checkbox" id="checkboxTwentyTwo" value="Presentation_Mode" name="column[]">
+      <label for="checkboxTwentyTwo">Presentation Mode</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentyThree" value="Paper_or_Poster_Title" name="column[]">
+      <label for="checkboxTwentyThree">Paper or Poster Title</label>
+    </li>
+
+
+    <li><input type="checkbox" id="checkboxTwentyFour" value="Member_of_organizing_committee" name="column[]">
+      <label for="checkboxTwentyFour">Member of organizing committee</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentyFive" value="Financial_Assistance_required_from_CHARUSAT" name="column[]">
+      <label for="checkboxTwentyFive">Financial_Assistance_required_from_CHARUSAT</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentySix" value="Financial_Assistance_from_Other_Agency" name="column[]">
+      <label for="checkboxTwentySix">Financial Assistance from Other Agency</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentySeven" value="Name_of_Agency" name="column[]">
+      <label for="checkboxTwentySeven">Name_of_Agency</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentyEight" value="Amount_of_Assistance_from_Agency" name="column[]">
+      <label for="checkboxTwentyEight">Amount of Assistance from Agency</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentyNine" value="Assistance_approved_from_CHARUSAT" name="column[]">
+      <label for="checkboxTwentyNine">Assistance approved from CHARUSAT</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxThirty" value="Member_of_organizing_committee" name="column[]">
+      <label for="checkboxThirty">Member of organizing committee</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxThirtyOne" value="Event_Report_Status" name="column[]">
+      <label for="checkboxThirtyOne">Event Report Status</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxThirtyTwo" value="Actual_Expense" name="column[]">
+      <label for="checkboxThirtyTwo">Actual Expense</label>
+    </li>
+    <li><input type="checkbox" id="check-all" value="">
+      <label for="check-all">select All</label>
+    </li>
   </ul>
 
 </div>
@@ -438,17 +434,15 @@ require 'include.php';
     </div>
   </div>
 </div>
-</div>
 
-<div class="normalrow row">  
-  <div class="col-lg-2">
+    
+  <div align="right">
     <input style="margin-right: 50px" class="btn btn-info" id="fetch"  type="submit" name="fetch" value="Filter">
   </div>
-</div>
  
 
 
-	<div class="normalrow row">
+	<!-- <div class="normalrow row">
 		<div class="col-lg-4 form-group">
   			<input type="text" class="form-control" id="usr" placeholder="Amount of Assistance from Agency">
 		</div>
@@ -461,7 +455,7 @@ require 'include.php';
   			<input type="text" class="form-control" id="usr" placeholder="Actual Expance">
 		</div>
 	</div>
-	<div class="container" >
+	 --><div class="container" >
    <p class="font-weight-light" style="color:grey;font-size:18px;">Type something in the input field to search according that.</p>  
                 <input id="myInput" type="text" placeholder="Search..." class="form-control" width="30">
                 <br><br>
@@ -470,30 +464,23 @@ require 'include.php';
                   <img id="loading" src="images/loading.gif" alt="Loading..." >
 
                 </div>
+
+  <div>
+  <form method="POST" action="add_data.php" enctype="multipart/form-data">
+    <div align="center">  
+     <label>Select CSV File:</label>
+     <input type="file" name="file" /><br>
+     <input type="submit" name="submit" value="Import" class="btn btn-info" />
+     </div>
+  </form>
+
+</div>
                
   	<div id="order_table" style="overflow-x:auto; height: 380px;overflow-y: auto;">
   
    <div data-role="main" class="ui-content">
-
-
-<div>
-  <form method="POST" action="add_data.php" enctype="multipart/form-data">
-    <div align="center">  
-     <label>Select CSV File:</label>
-     <input type="file" name="file" />
-   </div>
-     <br />
-  <div align="center">
-     <input type="submit" name="submit" value="Import" class="btn btn-info" />
-     </div>
-  </form>
-  
-    
-</div>
    
-
-
-    <table id="tblData" style="white-space:nowrap;width:100%;" class="table table-bordered ui-responsive table-striped" data-role="table" data-mode="columntoggle"  >
+    <table id="tblData" style="white-space:nowrap;width:100%;" class="table table-bordered ui-responsive" data-role="table" data-mode="columntoggle">
 
 
       <thead>
@@ -514,9 +501,8 @@ require 'include.php';
                                <th>ReportSysID_H</th>
                                <th>RepOpt_H</th>
                                -->
-                                <th>Report_Option</th>
                                <th>Academic_Year</th>
-                               <th>Sub_Organization</th>
+                               <th>Event Type</th>
                                <th>Application_ID</th>
                                <th>Title</th>
                                <th>Venue</th>
@@ -543,17 +529,11 @@ require 'include.php';
                                <td><?php echo $row["Employee_Current_Status"]; ?></td>  
                                <td> <?php echo $row["Event_From"]; ?></td>  
                                <td><?php echo $row["Event_To"]; ?></td>
-                             <!--   <td><?php echo $row["RecStatus"]; ?></td>
-                              --> 
                                <td><?php echo $row["Department"]; ?></td>
-                              <!--  <td><?php echo $row["SubOrgID_H"]; ?></td>
-                               <td><?php echo $row["DeptID_H"]; ?></td>
-                               <td><?php echo $row["ReportSysID_H"]; ?></td>
-                               <td><?php echo $row["RepOpt_H"]; ?></td>
-                               --> 
-                               <td><?php echo $row["Report_Option"]; ?></td>
+                               
                                <td><?php echo $row["Academic_Year"]; ?></td>
-                               <td><?php echo $row["Sub_Organization"]; ?></td>
+                               <td><?php echo $row["Event_Type"]; ?></td>
+                               
                                <td><?php echo $row["Application_ID"]; ?></td>
                                <td><?php echo $row["Title"]; ?></td>
                                <td><?php echo $row["Venue"]; ?></td>
@@ -575,11 +555,13 @@ require 'include.php';
   	</table>
   </div>
   </div>
-	</div></br>
-
-  <div align="center">
-    <button onclick="exportToExcel('tblData', 'user-data')" class="btn btn-success">Print Table</button>
-  </div></br></br></br>
+	</div>
+<div>
+  <center>
+    <br><button onclick="exportToExcel('tblData', 'user-data')" class="btn btn-success">Export Table</button>
+  </center>
+</div>
+  
 
   <script>
 $(document).ready(function(){
@@ -648,10 +630,15 @@ $(document).ready(function(){
 
                 var from_date = $('#from_date').val();  
                 var to_date = $('#to_date').val(); 
+                var array = []; 
+                $("input:checkbox[class=mch]:checked").each(function() { 
+                  array.push($(this).val()); 
+                }); 
+                $('#GFG_DOWN').text(array);
                 
                 //alert(event_level); 
                  
-                if(event_type != '' || event_level != '' || academic_year!='' || report_status != '' || participation_mode !='' || organizing_body !='' || participation_hour != '' || leave_required !='' || Member_of_organized !='' || financial_charusat != '' || financial_other_agency != '' || (from_date!='' && to_date!=''))  
+                if((event_type != '' || event_level != '' || academic_year!='' || report_status != '' || participation_mode !='' || organizing_body !='' || participation_hour != '' || leave_required !='' || Member_of_organized !='' || financial_charusat != '' || financial_other_agency != '' || (from_date!='' && to_date!='') ) && array.length != 0)  
                 { 
 
                  alert("Hi! chandresh mendapara");
@@ -659,8 +646,10 @@ $(document).ready(function(){
                      $.ajax({  
                           url:"filter.php",  
                           method:"POST",  
-                          data:{action:action,event_level:event_level,event_type:event_type,academic_year:academic_year,report_status:report_status,participation_mode:participation_mode,organizing_body:organizing_body,participation_hour:participation_hour,
-                              Member_of_organized:Member_of_organized,leave_required:leave_required,financial_other_agency:financial_other_agency,financial_charusat:financial_charusat,from_date:from_date,to_date:to_date
+                          data:{action:action,
+
+                            event_level:event_level,event_type:event_type,academic_year:academic_year,report_status:report_status,participation_mode:participation_mode,organizing_body:organizing_body,participation_hour:participation_hour,
+                              Member_of_organized:Member_of_organized,leave_required:leave_required,financial_other_agency:financial_other_agency,financial_charusat:financial_charusat,from_date:from_date,to_date:to_date,array:array,
                           },  
 
                           beforeSend:function()
@@ -682,7 +671,7 @@ $(document).ready(function(){
 
                 else{
 
-                  alert("Please add at least one filter or add both Date filter");
+                  alert("Please add at least one filter or add both Date filter or select at least one column ");
 
 
 
@@ -691,6 +680,16 @@ $(document).ready(function(){
                 
            });  
       });  
+ </script>
+
+ <script type="text/javascript">
+   document.getElementById('check-all').onclick = function() {
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  for (var checkbox of checkboxes) {
+    checkbox.checked = this.checked;
+  }
+}
+
  </script>
  <script type="text/javascript">
 function exportToExcel(tableID, filename = ''){
@@ -720,3 +719,10 @@ function exportToExcel(tableID, filename = ''){
 }
  
 </script>
+
+
+
+
+
+
+
