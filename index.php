@@ -36,7 +36,7 @@ require 'include.php';
 
 
      
-  <link rel="stylesheet" type="text/css" href="style/index.css">
+  <link rel="stylesheet" type="text/css" href="CSS/index.css">
 </head>
 <body>
   <!-- <form action="fetch_data.php" method="POST"> -->
@@ -45,9 +45,7 @@ require 'include.php';
 
     <div class="col-lg-2 dropdown">
       <select name="report_status" id="report_status">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Report status
-        </button>
+          
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           
             <option class="dropdown-item" value="">-- Select Report  Status --</option>
@@ -317,25 +315,132 @@ require 'include.php';
 
 
     <div class="containerr">
-  <ul class="ks-cboxtags">
-    <li><input type="checkbox" id="checkboxOne" value="Rainbow Dash"><label for="checkboxOne">Rainbow Dash</label></li>
-    <li><input type="checkbox" id="checkboxTwo" value="Cotton Candy" checked><label for="checkboxTwo">Cotton Candy</label></li>
-    <li><input type="checkbox" id="checkboxThree" value="Rarity" checked><label for="checkboxThree">Rarity</label></li>
-    <li><input type="checkbox" id="checkboxFour" value="Moondancer"><label for="checkboxFour">Moondancer</label></li>
-    <li><input type="checkbox" id="checkboxFive" value="Surprise"><label for="checkboxFive">Surprise</label></li>
-    <li><input type="checkbox" id="checkboxSix" value="Twilight Sparkle" checked><label for="checkboxSix">Twilight
-                    Sparkle</label></li>
-    <li><input type="checkbox" id="checkboxSeven" value="Fluttershy"><label for="checkboxSeven">Fluttershy</label></li>
-    <li><input type="checkbox" id="checkboxEight" value="Derpy Hooves"><label for="checkboxEight">Derpy Hooves</label></li>
-    <li><input type="checkbox" id="checkboxNine" value="Princess Celestia"><label for="checkboxNine">Princess
-                    Celestia</label></li>
-    <li><input type="checkbox" id="checkboxTen" value="Gusty"><label for="checkboxTen">Gusty</label></li>
-    <li class="ks-selected"><input type="checkbox" id="checkboxEleven" value="Discord"><label for="checkboxEleven">Discord</label></li>
-    <li><input type="checkbox" id="checkboxTwelve" value="Clover"><label for="checkboxTwelve">Clover</label></li>
-    <li><input type="checkbox" id="checkboxThirteen" value="Baby Moondancer"><label for="checkboxThirteen">Baby
-                    Moondancer</label></li>
-    <li><input type="checkbox" id="checkboxFourteen" value="Medley"><label for="checkboxFourteen">Medley</label></li>
-    <li><input type="checkbox" id="checkboxFifteen" value="Firefly"><label for="checkboxFifteen">Firefly</label></li>
+  <ul class="ks-cboxtags" >
+    <li><input type="checkbox" class="mch" id="checkboxOne" value="Employee_Code" name="column[]" checked>
+      <label for="checkboxOne">Emp ID</label>
+    </li>
+    <li><input type="checkbox" class="mch" id="checkboxTwo" value="Department" checked name="column[]" >
+      <label for="checkboxTwo">Department</label>
+    </li>
+    <li><input type="checkbox" class="mch" id="checkboxThree" value="Employee_Name" checked name="column[]">
+      <label for="checkboxThree">Employee Name</label>
+    </li>
+    <li><input type="checkbox" class="mch" id="checkboxFour" value="Employee_Current_Status" name="column[]" checked>
+      <label for="checkboxFour">Employee Current Status</label>
+    </li>
+    <li><input type="checkbox" class="mch" id="checkboxFive" value="Designation" name="column[]">
+      <label for="checkboxFive">Designation</label>
+    </li>
+
+    <li><input type="checkbox" class="mch" id="checkboxFivee" value="Academic_Year" name="column[]" checked>
+      <label for="checkboxFivee">Academic year</label>
+    </li>
+    <li><input type="checkbox" id="checkboxSix" value="Event_Type" checked name="column[]">
+      <label for="checkboxSix">Event_Type</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxSixx" value="Application_ID" checked name="column[]">
+      <label for="checkboxSixx">Application ID</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxSixxx" value="Sub_Organization"  name="column[]">
+      <label for="checkboxSixxx">Sub Organization</label>
+    </li>
+    <li><input type="checkbox" id="checkboxSeven" value="Event_Level" name="column[]">
+      <label for="checkboxSeven">Event_Level</label>
+    </li>
+    <li><input type="checkbox" id="checkboxEight" value="Participation Presentation Mode  " name="column[]">
+      <label for="checkboxEight">Participation_Presentation_Mode  </label>
+    </li>
+    <li><input type="checkbox" id="checkboxNine" value="Organizing_Body" name="column[]">
+      <label for="checkboxNine">Organizing_Body</label>
+    </li>
+    <li><input type="checkbox" id="checkboxTen" value="Name_of_Organizing_Body" name="column[]">
+      <label for="checkboxTen">Name of Organizing Body</label></li>
+    <li class="ks-selected"><input type="checkbox" id="checkboxEleven" value="Title" name="column[]" checked>
+      <label for="checkboxEleven">Title</label></li>
+    <li><input type="checkbox" id="checkboxTwelve" value="Venue" name="column[]" checked>
+      <label for="checkboxTwelve">Venue</label>
+    </li>
+    <li><input type="checkbox" id="checkboxThirteen" value="City" name="column[]" checked>
+      <label for="checkboxThirteen">City</label>
+    </li>
+    <li><input type="checkbox" id="checkboxFourteen" value="State" name="column[]" checked>
+      <label for="checkboxFourteen">State</label>
+    </li>
+    <li><input type="checkbox" id="checkboxFifteenn" value="Country" name="column[]" checked>
+      <label for="checkboxFifteenn">Country</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxSixteen" value="Event_From" name="column[]" checked>
+      <label for="checkboxSixteen">Event From</label>
+    </li>
+    <li><input type="checkbox" id="checkboxSeventeen" value="Event_To" name="column[]" checked>
+      <label for="checkboxSeventeen">Event To</label>
+    </li>
+    <li><input type="checkbox" id="checkboxEighteen" value="Total_Hours_of_Participation" name="column[]">
+      <label for="checkboxEighteen">Hours of Participation</label>
+    </li> 
+    <li><input type="checkbox" id="checkboxNineteen" value="Leave_Required" name="column[]">
+      <label for="checkboxNineteen">Leave Required?</label>
+    </li>
+            
+    <li><input type="checkbox" id="checkboxTwenty" value="    Purpose_of_Event_Participation" name="column[]">
+      <label for="checkboxTwenty">Purpose of Event Participation</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentyOne" value="Presenting_as" name="column[]">
+      <label for="checkboxTwentyOne">Presenting as</label>
+    </li>
+
+
+    <li><input type="checkbox" id="checkboxTwentyTwo" value="Presentation_Mode" name="column[]">
+      <label for="checkboxTwentyTwo">Presentation Mode</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentyThree" value="Paper_or_Poster_Title" name="column[]">
+      <label for="checkboxTwentyThree">Paper or Poster Title</label>
+    </li>
+
+
+    <li><input type="checkbox" id="checkboxTwentyFour" value="Member_of_organizing_committee" name="column[]">
+      <label for="checkboxTwentyFour">Member of organizing committee</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentyFive" value="Financial_Assistance_required_from_CHARUSAT" name="column[]">
+      <label for="checkboxTwentyFive">Financial_Assistance_required_from_CHARUSAT</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentySix" value="Financial_Assistance_from_Other_Agency" name="column[]">
+      <label for="checkboxTwentySix">Financial Assistance from Other Agency</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentySeven" value="Name_of_Agency" name="column[]">
+      <label for="checkboxTwentySeven">Name_of_Agency</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentyEight" value="Amount_of_Assistance_from_Agency" name="column[]">
+      <label for="checkboxTwentyEight">Amount of Assistance from Agency</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxTwentyNine" value="Assistance_approved_from_CHARUSAT" name="column[]">
+      <label for="checkboxTwentyNine">Assistance approved from CHARUSAT</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxThirty" value="Member_of_organizing_committee" name="column[]">
+      <label for="checkboxThirty">Member of organizing committee</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxThirtyOne" value="Event_Report_Status" name="column[]">
+      <label for="checkboxThirtyOne">Event Report Status</label>
+    </li>
+
+    <li><input type="checkbox" id="checkboxThirtyTwo" value="Actual_Expense" name="column[]">
+      <label for="checkboxThirtyTwo">Actual Expense</label>
+    </li>
+    <li><input type="checkbox" id="check-all" value="">
+      <label for="check-all">select All</label>
+    </li>
   </ul>
 
 </div>
@@ -353,7 +458,7 @@ require 'include.php';
  
 
 
-	<div class="normalrow row">
+	<!-- <div class="normalrow row">
 		<div class="col-lg-4 form-group">
   			<input type="text" class="form-control" id="usr" placeholder="Amount of Assistance from Agency">
 		</div>
@@ -366,7 +471,7 @@ require 'include.php';
   			<input type="text" class="form-control" id="usr" placeholder="Actual Expance">
 		</div>
 	</div>
-	<div class="container" >
+	 --><div class="container" >
    <p class="font-weight-light" style="color:grey;font-size:18px;">Type something in the input field to search according that.</p>  
                 <input id="myInput" type="text" placeholder="Search..." class="form-control" width="30">
                 <br><br>
@@ -380,7 +485,11 @@ require 'include.php';
   
    <div data-role="main" class="ui-content">
    
-    <table id="tblData" style="white-space:nowrap;width:100%;" class="table table-bordered ui-responsive" data-role="table" data-mode="columntoggle"  >
+    <table id="tblData" style="white-space:nowrap;width:100%;" class="table table-bordered ui-responsive" data-role="table" data-mode="columntoggle"
+
+
+
+      >
 
 
       <thead>
@@ -401,9 +510,8 @@ require 'include.php';
                                <th>ReportSysID_H</th>
                                <th>RepOpt_H</th>
                                -->
-                                <th>Report_Option</th>
                                <th>Academic_Year</th>
-                               <th>Sub_Organization</th>
+                               <th>Event Type</th>
                                <th>Application_ID</th>
                                <th>Title</th>
                                <th>Venue</th>
@@ -430,17 +538,11 @@ require 'include.php';
                                <td><?php echo $row["Employee_Current_Status"]; ?></td>  
                                <td> <?php echo $row["Event_From"]; ?></td>  
                                <td><?php echo $row["Event_To"]; ?></td>
-                             <!--   <td><?php echo $row["RecStatus"]; ?></td>
-                              --> 
                                <td><?php echo $row["Department"]; ?></td>
-                              <!--  <td><?php echo $row["SubOrgID_H"]; ?></td>
-                               <td><?php echo $row["DeptID_H"]; ?></td>
-                               <td><?php echo $row["ReportSysID_H"]; ?></td>
-                               <td><?php echo $row["RepOpt_H"]; ?></td>
-                               --> 
-                               <td><?php echo $row["Report_Option"]; ?></td>
+                               
                                <td><?php echo $row["Academic_Year"]; ?></td>
-                               <td><?php echo $row["Sub_Organization"]; ?></td>
+                               <td><?php echo $row["Event_Type"]; ?></td>
+                               
                                <td><?php echo $row["Application_ID"]; ?></td>
                                <td><?php echo $row["Title"]; ?></td>
                                <td><?php echo $row["Venue"]; ?></td>
@@ -473,7 +575,12 @@ require 'include.php';
      </div>
   </form>
   <button onclick="exportToExcel('tblData', 'user-data')" class="btn btn-success">Export Table Data To Excel File</button>
-    
+        <p id="GFG_DOWN">asdfgh</p>
+
+
+
+
+
 </div>
 
 
@@ -544,10 +651,15 @@ $(document).ready(function(){
 
                 var from_date = $('#from_date').val();  
                 var to_date = $('#to_date').val(); 
+                var array = []; 
+                $("input:checkbox[class=mch]:checked").each(function() { 
+                  array.push($(this).val()); 
+                }); 
+                $('#GFG_DOWN').text(array);
                 
                 //alert(event_level); 
                  
-                if(event_type != '' || event_level != '' || academic_year!='' || report_status != '' || participation_mode !='' || organizing_body !='' || participation_hour != '' || leave_required !='' || Member_of_organized !='' || financial_charusat != '' || financial_other_agency != '' || (from_date!='' && to_date!=''))  
+                if((event_type != '' || event_level != '' || academic_year!='' || report_status != '' || participation_mode !='' || organizing_body !='' || participation_hour != '' || leave_required !='' || Member_of_organized !='' || financial_charusat != '' || financial_other_agency != '' || (from_date!='' && to_date!='') ) && array.length != 0)  
                 { 
 
                  alert("Hi! chandresh mendapara");
@@ -555,8 +667,10 @@ $(document).ready(function(){
                      $.ajax({  
                           url:"filter.php",  
                           method:"POST",  
-                          data:{action:action,event_level:event_level,event_type:event_type,academic_year:academic_year,report_status:report_status,participation_mode:participation_mode,organizing_body:organizing_body,participation_hour:participation_hour,
-                              Member_of_organized:Member_of_organized,leave_required:leave_required,financial_other_agency:financial_other_agency,financial_charusat:financial_charusat,from_date:from_date,to_date:to_date
+                          data:{action:action,
+
+                            event_level:event_level,event_type:event_type,academic_year:academic_year,report_status:report_status,participation_mode:participation_mode,organizing_body:organizing_body,participation_hour:participation_hour,
+                              Member_of_organized:Member_of_organized,leave_required:leave_required,financial_other_agency:financial_other_agency,financial_charusat:financial_charusat,from_date:from_date,to_date:to_date,array:array,
                           },  
 
                           beforeSend:function()
@@ -578,7 +692,7 @@ $(document).ready(function(){
 
                 else{
 
-                  alert("Please add at least one filter or add both Date filter");
+                  alert("Please add at least one filter or add both Date filter or select at least one column ");
 
 
 
@@ -587,6 +701,16 @@ $(document).ready(function(){
                 
            });  
       });  
+ </script>
+
+ <script type="text/javascript">
+   document.getElementById('check-all').onclick = function() {
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  for (var checkbox of checkboxes) {
+    checkbox.checked = this.checked;
+  }
+}
+
  </script>
  <script type="text/javascript">
 function exportToExcel(tableID, filename = ''){
@@ -616,5 +740,10 @@ function exportToExcel(tableID, filename = ''){
 }
  
 </script>
+
+
+
+
+
 
 

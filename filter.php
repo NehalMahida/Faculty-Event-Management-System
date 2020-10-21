@@ -2,9 +2,15 @@
 <?php  
  //filter.php 
 require 'include.php';
+$myArray= $_REQUEST["array"];
 
-if(isset($_POST["action"]))
+if(isset($_POST["action"]) && sizeof($myArray)>0)
 {
+
+
+  
+
+
 $query = "
       SELECT * FROM sheet3 WHERE 1=1
       ";
@@ -57,6 +63,15 @@ $query = "
 
       } 
 
+
+    if(isset($_POST["participation_mode"]) && !empty($_POST["participation_mode"]))  
+  {  
+    $query .= " AND Participation_Presentation_Mode  = '".$_POST["participation_mode"]. "' 
+      "; 
+
+
+
+      } 
 
 
    if(isset($_POST["Member_of_organized"]) && !empty($_POST["Member_of_organized"]))  
@@ -123,13 +138,31 @@ $query = "
        $output .= '  
            <table style="white-space:nowrap;width:100%;" class="table table-bordered ">  
                 <tr class="table-primary">  
-                     <th width="5%">Employee Code</th>  
-                     <th width="30%">Employee Name</th>  
-                     <th width="25%">Employee Current Status</th>
-                     <th width="25%">Report Status</th>  
-                     <th width="25%">Academic Year</th> 
+                     <th>Sr No. </th>' ;
+                     
+                     if(in_array("Employee_Code", $myArray)){ 
+                       
+                  $output .= ' <th width="5%">Employee Code</th>';
+                   }
+                    if(in_array("Employee_Name", $myArray)){
+                   $output .= ' <th width="30%">Employee Name</th>';
+                   }  
+                   if(in_array("Employee_Current_Status", $myArray)){
+                     $output .= '<th width="25%">Employee Current Status</th>';
+                   }
+
+                   if(in_array("report_status", $myArray)){
+                     $output .= '<th width="25%">Report Status</th>' ;
+                      }
+
+
+
+                    if(in_array("academic_year", $myArray)){
+
+                     $output .= '<th width="25%">Academic Year</th>' ;
+                   }
                       
-                     <th width="15%">Event_From</th>  
+                    $output .= ' <th width="15%">Event_From</th>  
                      <th>Event_To</th> 
                       <th width="25%">Leave_Required ?</th> 
                       
@@ -142,26 +175,29 @@ $query = "
                 </tr>
                 
       ';
-
-       // $statement = $connect->prepare($query);
-       // $statement->execute();
-       // $result = $statement->fetchAll();
-       // $total_row = $statement->rowCount();
-
              $i=true;
      $result = mysqli_query($connect, $query);  
 
       if(mysqli_num_rows($result) > 0)  
       {  
+        $j=0;
            while($row = mysqli_fetch_array($result))  
            {  
+
+                $j++;
             if(!$i){
 
-
                 $output .= ' 
+
                 <tbody id="myTable">   
                      <tr style="background-color: #f2f2f2"}>  
-                          <td>'. $row["Employee_Code"] .'</td>  
+
+                          <td>'.   $j .'</td> ';
+                           if(in_array("Employee_Code", $myArray)){ 
+                    $output .='
+                          <td>'. $row["Employee_Code"] .'</td> ';
+                        }
+                    $output .=' 
                           <td>'. $row["Employee_Name"] .'</td>  
                           <td>'. $row["Employee_Current_Status"] .'</td>
                           <td>'. $row["Event_Report_Status"] .'</td>
@@ -192,8 +228,12 @@ $query = "
                 $output .= ' 
                 <tbody id="myTable">   
                      <tr>  
-                          <td>'. $row["Employee_Code"] .'</td>  
-                          <td>'. $row["Employee_Name"] .'</td>  
+                          <td>'.  $j .'</td>';
+                           if(in_array("Employee_Code", $myArray)){ 
+                    $output .='
+                          <td>'. $row["Employee_Code"] .'</td> ';
+                        }
+                    $output .=' <td>'. $row["Employee_Name"] .'</td>  
                           <td>'. $row["Employee_Current_Status"] .'</td>
                           <td>'. $row["Event_Report_Status"] .'</td>
 
