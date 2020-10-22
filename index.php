@@ -7,13 +7,13 @@ require 'include.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Faculty Event Report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Event Report</title>
 
         
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
            <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
 
@@ -24,8 +24,8 @@ require 'include.php';
 </head>
 <body>
   <!-- <form action="fetch_data.php" method="POST"> -->
-  	<div class="firstrow row">
-		
+    <div class="firstrow row">
+    
 
     <div class="col-lg-2 dropdown">
       <select class="select-css" class="select-css" name="report_status" id="report_status">
@@ -83,11 +83,11 @@ require 'include.php';
  
     </div>
 
-		<div class="col-lg-2 dropdown">
+    <div class="col-lg-2 dropdown">
       <select class="select-css" name="event_type" id="event_type">
-       			
-  			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    			
+            
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          
             <option class="dropdown-item" value=""> Select Event Type </option>
             <option class="dropdown-item" value="FDP">FDP</option>
             <option class="dropdown-item" value="Industrial Training">Industrial Training</option>
@@ -101,10 +101,10 @@ require 'include.php';
 
 
    
-  			</div>
+        </div>
         </select>
  
-		</div>
+    </div>
 
     <div class="col-lg-2 dropdown">
       <select class="select-css" name="event_level" id="event_level">
@@ -142,7 +142,7 @@ require 'include.php';
 
 
 
-	
+  
     <div class="col-lg-2 dropdown">
       <select class="select-css" name="participation_mode" id="participation_mode">
             
@@ -173,10 +173,10 @@ require 'include.php';
     </div>
 
 
-	</div>
+  </div>
 
-	<div class="normalrow row">
-		<div class="col-lg-2 dropdown">
+  <div class="normalrow row">
+    <div class="col-lg-2 dropdown">
         <select class="select-css" name="participation_hour" id="participation_hour">
             
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -187,11 +187,11 @@ require 'include.php';
    
         </div>
         </select>
-   			
+        
 
 
 
-		</div>
+    </div>
 
 
     <div class="col-lg-2 dropdown">
@@ -239,10 +239,10 @@ require 'include.php';
                 </div>  
                 
                 
-	</div>
+  </div>
 
-	<div class="normalrow row">
-		
+  <div class="normalrow row">
+    
 
 
 
@@ -265,7 +265,7 @@ require 'include.php';
 
     </div>
 
-	
+  
 
 
 
@@ -288,7 +288,7 @@ require 'include.php';
 
 
 
-  			
+        
 
 
         <div id="header">
@@ -312,117 +312,120 @@ require 'include.php';
     <li><input type="checkbox" class="mch" id="checkboxFour" value="Employee_Current_Status" name="column[]" checked>
       <label for="checkboxFour">Employee Current Status</label>
     </li>
-    <li><input type="checkbox" class="mch" id="checkboxFive" value="Designation" name="column[]">
+    <li>
+      <input type="checkbox" class="mch" id="checkboxFive" value="Designation" name="column[]">
       <label for="checkboxFive">Designation</label>
     </li>
 
-    <li><input type="checkbox" class="mch" id="checkboxFivee" value="Academic_Year" name="column[]" checked>
+    <li>
+      <input type="checkbox" class="mch" id="checkboxFivee" value="Academic_Year" name="column[]" checked>
       <label for="checkboxFivee">Academic year</label>
     </li>
-    <li><input type="checkbox" id="checkboxSix" value="Event_Type" checked name="column[]">
+    <li>
+      <input type="checkbox"  class="mch" id="checkboxSix" value="Event_Type" checked name="column[]">
       <label for="checkboxSix">Event_Type</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxSixx" value="Application_ID" checked name="column[]">
-      <label for="checkboxSixx">Application ID</label>
+    <li>
+      <input type="checkbox" class="mch" id="checkboxThirtyThree" class="mch" value="Application_ID" checked name="column[]">
+      <label for="checkboxThirtyThree">Application ID</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxSixxx" value="Sub_Organization"  name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxSixxx" value="Sub_Organization"  name="column[]">
       <label for="checkboxSixxx">Sub Organization</label>
     </li>
-    <li><input type="checkbox" id="checkboxSeven" value="Event_Level" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxSeven" value="Event_Level" name="column[]">
       <label for="checkboxSeven">Event_Level</label>
     </li>
-    <li><input type="checkbox" id="checkboxEight" value="Participation Presentation Mode  " name="column[]">
-      <label for="checkboxEight">Participation_Presentation_Mode  </label>
+    <li><input type="checkbox" class="mch" id="checkboxEight" value="Participation_Presentation_Mode" name="column[]">
+      <label for="checkboxEight">Participation Presentation Mode  </label>
     </li>
-    <li><input type="checkbox" id="checkboxNine" value="Organizing_Body" name="column[]">
-      <label for="checkboxNine">Organizing_Body</label>
+    <li><input type="checkbox" class="mch" id="checkboxNine" value="Organizing_Body" name="column[]">
+      <label for="checkboxNine">Organizing Body</label>
     </li>
-    <li><input type="checkbox" id="checkboxTen" value="Name_of_Organizing_Body" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxTen" value="Name_of_Organizing_Body" name="column[]">
       <label for="checkboxTen">Name of Organizing Body</label></li>
-    <li class="ks-selected"><input type="checkbox" id="checkboxEleven" value="Title" name="column[]" checked>
-      <label for="checkboxEleven">Title</label></li>
-    <li><input type="checkbox" id="checkboxTwelve" value="Venue" name="column[]" checked>
+    <li >
+      <input type="checkbox" class="mch" id="checkboxEleven" value="Title" name="column[]" checked>
+      <label for="checkboxEleven">Title</label>
+    </li>
+    <li><input type="checkbox" class="mch" id="checkboxTwelve" value="Venue" name="column[]" checked>
       <label for="checkboxTwelve">Venue</label>
     </li>
-    <li><input type="checkbox" id="checkboxThirteen" value="City" name="column[]" checked>
+    <li><input type="checkbox" class="mch" id="checkboxThirteen" value="City" name="column[]" checked>
       <label for="checkboxThirteen">City</label>
     </li>
-    <li><input type="checkbox" id="checkboxFourteen" value="State" name="column[]" checked>
+    <li><input type="checkbox" class="mch" id="checkboxFourteen" value="State" name="column[]" checked>
       <label for="checkboxFourteen">State</label>
     </li>
-    <li><input type="checkbox" id="checkboxFifteenn" value="Country" name="column[]" checked>
+    <li><input type="checkbox" class="mch" id="checkboxFifteenn" value="Country" name="column[]" checked>
       <label for="checkboxFifteenn">Country</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxSixteen" value="Event_From" name="column[]" checked>
+    <li><input type="checkbox" class="mch" id="checkboxSixteen" value="Event_From" name="column[]" checked>
       <label for="checkboxSixteen">Event From</label>
     </li>
-    <li><input type="checkbox" id="checkboxSeventeen" value="Event_To" name="column[]" checked>
+    <li><input type="checkbox" class="mch" id="checkboxSeventeen" value="Event_To" name="column[]" checked>
       <label for="checkboxSeventeen">Event To</label>
     </li>
-    <li><input type="checkbox" id="checkboxEighteen" value="Total_Hours_of_Participation" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxEighteen" value="Total_Hours_of_Participation" name="column[]">
       <label for="checkboxEighteen">Hours of Participation</label>
     </li> 
-    <li><input type="checkbox" id="checkboxNineteen" value="Leave_Required" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxNineteen" value="Leave_Required" name="column[]">
       <label for="checkboxNineteen">Leave Required?</label>
     </li>
             
-    <li><input type="checkbox" id="checkboxTwenty" value="    Purpose_of_Event_Participation" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxTwenty" value="Purpose_of_Event_Participation" name="column[]">
       <label for="checkboxTwenty">Purpose of Event Participation</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxTwentyOne" value="Presenting_as" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxTwentyOne" value="Presenting_as" name="column[]">
       <label for="checkboxTwentyOne">Presenting as</label>
     </li>
 
 
-    <li><input type="checkbox" id="checkboxTwentyTwo" value="Presentation_Mode" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxTwentyTwo" value="Presentation_Mode" name="column[]">
       <label for="checkboxTwentyTwo">Presentation Mode</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxTwentyThree" value="Paper_or_Poster_Title" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxTwentyThree" value="Paper_or_Poster_Title" name="column[]">
       <label for="checkboxTwentyThree">Paper or Poster Title</label>
     </li>
 
 
-    <li><input type="checkbox" id="checkboxTwentyFour" value="Member_of_organizing_committee" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxTwentyFour" value="Member_of_organizing_committee" name="column[]">
       <label for="checkboxTwentyFour">Member of organizing committee</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxTwentyFive" value="Financial_Assistance_required_from_CHARUSAT" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxTwentyFive" value="Financial_Assistance_required_from_CHARUSAT" name="column[]">
       <label for="checkboxTwentyFive">Financial_Assistance_required_from_CHARUSAT</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxTwentySix" value="Financial_Assistance_from_Other_Agency" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxTwentySix" value="Financial_Assistance_from_Other_Agency" name="column[]">
       <label for="checkboxTwentySix">Financial Assistance from Other Agency</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxTwentySeven" value="Name_of_Agency" name="column[]">
-      <label for="checkboxTwentySeven">Name_of_Agency</label>
+    <li><input type="checkbox" class="mch" id="checkboxTwentySeven" value="Name_of_Agency" name="column[]">
+      <label for="checkboxTwentySeven">Name of Agency</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxTwentyEight" value="Amount_of_Assistance_from_Agency" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxTwentyEight" value="Amount_of_Assistance_from_Agency" name="column[]">
       <label for="checkboxTwentyEight">Amount of Assistance from Agency</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxTwentyNine" value="Assistance_approved_from_CHARUSAT" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxTwentyNine" value="Assistance_approved_from_CHARUSAT" name="column[]">
       <label for="checkboxTwentyNine">Assistance approved from CHARUSAT</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxThirty" value="Member_of_organizing_committee" name="column[]">
-      <label for="checkboxThirty">Member of organizing committee</label>
-    </li>
 
-    <li><input type="checkbox" id="checkboxThirtyOne" value="Event_Report_Status" name="column[]">
+    <li><input type="checkbox" class="mch" id="checkboxThirtyOne" value="Event_Report_Status" name="column[]">
       <label for="checkboxThirtyOne">Event Report Status</label>
     </li>
 
-    <li><input type="checkbox" id="checkboxThirtyTwo" value="Actual_Expense" name="column[]">
+    <li><input class="mch" type="checkbox" id="checkboxThirtyTwo" value="Actual_Expense" name="column[]">
       <label for="checkboxThirtyTwo">Actual Expense</label>
     </li>
-    <li><input type="checkbox" id="check-all" value="">
+    <li><input type="checkbox" class="mch" id="check-all" value="">
       <label for="check-all">select All</label>
     </li>
   </ul>
@@ -442,20 +445,20 @@ require 'include.php';
  
 
 
-	<!-- <div class="normalrow row">
-		<div class="col-lg-4 form-group">
-  			<input type="text" class="form-control" id="usr" placeholder="Amount of Assistance from Agency">
-		</div>
+  <!-- <div class="normalrow row">
+    <div class="col-lg-4 form-group">
+        <input type="text" class="form-control" id="usr" placeholder="Amount of Assistance from Agency">
+    </div>
 
-		<div class="col-lg-4 form-group">
-  			<input type="text" class="form-control" id="usr" placeholder="Assistance Approved from CHARUSAT">
-		</div>
+    <div class="col-lg-4 form-group">
+        <input type="text" class="form-control" id="usr" placeholder="Assistance Approved from CHARUSAT">
+    </div>
 
-		<div class="col-lg-4 form-group">
-  			<input type="text" class="form-control" id="usr" placeholder="Actual Expance">
-		</div>
-	</div>
-	 --><div class="container" >
+    <div class="col-lg-4 form-group">
+        <input type="text" class="form-control" id="usr" placeholder="Actual Expance">
+    </div>
+  </div>
+   --><div class="container" >
    <p class="font-weight-light" style="color:grey;font-size:18px;">Type something in the input field to search according that.</p>  
                 <input id="myInput" type="text" placeholder="Search..." class="form-control" width="30">
                 <br><br>
@@ -476,7 +479,7 @@ require 'include.php';
 
 </div>
                
-  	<div id="order_table" style="overflow-x:auto; height: 380px;overflow-y: auto;">
+    <div id="order_table" style="overflow-x:auto; height: 380px;overflow-y: auto;">
   
    <div data-role="main" class="ui-content">
    
@@ -484,8 +487,8 @@ require 'include.php';
 
 
       <thead>
-    	
-      		
+      
+          
         <tr class="table-primary"> 
                               <th>Sr No.</th> 
                                <th   data-priority="1" >Employee Code</th>  
@@ -551,11 +554,11 @@ require 'include.php';
                      }  
                      ?> 
 
-    	</tbody>
-  	</table>
+      </tbody>
+    </table>
   </div>
   </div>
-	</div>
+  </div>
 <div>
   <center>
     <br><button onclick="exportToExcel('tblData', 'user-data')" class="btn btn-success">Export Table</button>
@@ -638,7 +641,7 @@ $(document).ready(function(){
                 
                 //alert(event_level); 
                  
-                if((event_type != '' || event_level != '' || academic_year!='' || report_status != '' || participation_mode !='' || organizing_body !='' || participation_hour != '' || leave_required !='' || Member_of_organized !='' || financial_charusat != '' || financial_other_agency != '' || (from_date!='' && to_date!='') ) && array.length != 0)  
+                if(event_type != '' || event_level != '' || academic_year!='' || report_status != '' || participation_mode !='' || organizing_body !='' || participation_hour != '' || leave_required !='' || Member_of_organized !='' || financial_charusat != '' || financial_other_agency != '' || (from_date!='' && to_date!='')  || array.length != 0)  
                 { 
 
                  alert("Hi! chandresh mendapara");
