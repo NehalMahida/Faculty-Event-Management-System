@@ -31,27 +31,75 @@ require 'include.php';
                 $item18 = mysqli_real_escape_string($connect, $data[17]); 
                 $item19 = mysqli_real_escape_string($connect, $data[18]); 
                 $item20 = mysqli_real_escape_string($connect, $data[19]); 
+
                 $item21 = mysqli_real_escape_string($connect, $data[20]); 
+                if($item21 == ""){
+                  $item21="N/A";
+                }
                 $item22 = mysqli_real_escape_string($connect, $data[21]); 
+                if($item22 == ""){
+                  $item22="N/A";
+                }
                 $item23 = mysqli_real_escape_string($connect, $data[22]); 
+                if($item23 == ""){
+                  $item23="N/A";
+                }
                 $item24 = mysqli_real_escape_string($connect, $data[23]); 
+                if($item24 == ""){
+                  $item24="N/A";
+                }
                 $item25 = mysqli_real_escape_string($connect, $data[24]); 
+                if($item25 == ""){
+                  $item25="N/A";
+                }
                 $item26 = mysqli_real_escape_string($connect, $data[25]); 
+                if($item26 == ""){
+                  $item26="N/A";
+                }
                 $item27 = mysqli_real_escape_string($connect, $data[26]); 
+                if($item27 == ""){
+                  $item27="N/A";
+                }
                 $item28 = mysqli_real_escape_string($connect, $data[27]); 
+                if($item28 == ""){
+                  $item28="N/A";
+                }
                 $item29 = mysqli_real_escape_string($connect, $data[28]); 
+                if($item29 == ""){
+                  $item29="N/A";
+                }
                 $item30 = mysqli_real_escape_string($connect, $data[29]); 
-
+                if($item30 == ""){
+                  $item30="N/A";
+                }
                 $item31 = mysqli_real_escape_string($connect, $data[30]); 
-
+                if($item31 == ""){
+                  $item31="N/A";
+                }
                 $item32 = mysqli_real_escape_string($connect, $data[31]); 
-
+                if($item32 == ""){
+                  $item32="N/A";
+                }
                 $item33 = mysqli_real_escape_string($connect, $data[32]); 
 
+                if($item33 == ""){
+                  $item33="N/A";
+                }
                 $item34 = mysqli_real_escape_string($connect, $data[33]); 
                 
-                $item35 = mysqli_real_escape_string($connect, $data[34]); 
+                if($item34 == ""){
+                  $item34="N/A";
+                }
+                $item35 = mysqli_real_escape_string($connect, $data[34]);
+                
+                if($item35 == ""){
+                  $item35="N/A";
+                }                
                 $item36 = mysqli_real_escape_string($connect, $data[35]); 
+
+                if($item36 == ""){
+                  $item36="N/A";
+                }
                 //$item37 = mysqli_real_escape_string($connect, $data[36]); 
               //  $item38 = mysqli_real_escape_string($connect, $data[37]); 
                 //$item39 = mysqli_real_escape_string($connect, $data[38]); 
